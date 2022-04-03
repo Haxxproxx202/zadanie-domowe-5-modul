@@ -1,0 +1,23 @@
+{% extends "homework_app/base.html" %}
+
+{% block content %}
+<h2>
+<ul>
+    Nazwa kategori: {{item.category_name}} <br><br>
+
+    {% for i in gross_price %}
+    <li>
+        Nazwa produktu: <a href="{% url 'oneprod' i.id %}">{{i.name}}</a><br>
+
+        Cena brutto:  {{list|get_value:i.name}} zł<br><br>
+
+
+    </li>
+    {% endfor %}
+</ul>
+    <p>
+        <a href="{% url 'ctgs' %}">Cofnij</a>
+    </p>
+
+</h2>
+{% endblock %}

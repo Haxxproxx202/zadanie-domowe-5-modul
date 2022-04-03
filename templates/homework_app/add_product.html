@@ -1,0 +1,11 @@
+{% extends "homework_app/base.html" %}
+{% block content %}
+  <form action="" method="POST">
+    {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" value="Dodaj">
+  </form>
+    <p>
+        <a href="{% url 'products-list' %}">Cofnij</a>
+    </p>
+{% endblock %}

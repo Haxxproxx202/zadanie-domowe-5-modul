@@ -1,0 +1,13 @@
+{% extends "homework_app/base.html" %}
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <tabel>
+            {{form.as_p}}
+        </tabel>
+        <input type="submit" value="Update">
+    </form>
+    <p>
+        <a href="{% url 'products-list' %}">Cofnij</a>
+    </p>
+{% endblock %}

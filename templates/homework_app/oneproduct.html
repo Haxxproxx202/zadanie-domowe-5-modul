@@ -1,0 +1,14 @@
+{% extends "homework_app/base.html" %}
+
+{% block content %}
+
+<b>Nazwa produktu:</b> {{product.name}}<br>
+<b>Opis:</b> {{product.description}}<br>
+<b>Cena netto:</b> {{product.price}} RU<br>
+<b>Podatek:</b> {{product.vat}}<br>
+<b>Ilość w magazynie:</b> {{product.stock}} sztuk<br>
+
+<p>
+    <a href="{% url 'products-list' %}">Cofnij</a>
+</p>
+{% endblock %}

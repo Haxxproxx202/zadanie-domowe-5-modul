@@ -1,0 +1,19 @@
+{% extends "homework_app/base.html" %}
+{% block content %}
+
+<ul>
+    {% for i in list %}
+    <li>
+        <a href="{% url 'oneprod' i.id %}">{{i.name}}</a>
+        <a href="{% url 'edit-product' i.id %}" style="font-size: 7px">[edit]</a> <br>
+    </li>
+{% endfor %}
+</ul>
+    <p>
+        <a href="{% url 'main' %}">Cofnij</a>
+    </p>
+    <a href="{% url 'add-product' %}" style="color: red">Dodaj produkt</a>
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'homework_app/base.html' %}
+{% block content %}
+<p>
+<ul>
+    <li>
+        <a href="{% url 'ctgs' %}" style="font-size: 40px; font-family: Verdana">Kategorie</a><br>
+    </li>
+    <li>
+        <a href="{% url 'products-list' %}" style="font-size: 40px">Produkty</a><br>
+    </li>
+</ul>
+<br><br>
+<p>
+    <a href="{% url 'search' %}" style="font-size: 20px">Wyszukaj kategorie lub produkty</a>
+
+
+</p>
+
+
+
+
+{% endblock %}

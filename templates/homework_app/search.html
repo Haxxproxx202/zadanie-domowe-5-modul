@@ -1,0 +1,47 @@
+{% extends "homework_app/base.html" %}
+{% block content %}
+
+{% if error %}
+{% for i in error %}
+{{i}}
+{% endfor %}
+{% endif %}
+
+<p>Wyszukowanie</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>
+        <input type="text" name="result">
+        <input type="submit">
+    </p>
+
+</form>
+<div>
+    {% if products %}
+    <b>Produkty:</b>
+    <ul>
+        {% for i in products %}
+        <li>
+            {{i.name}}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+<div>
+    {% if categories %}
+   <b>Categorie:</b>
+    <ul>
+        {% for i in categories %}
+        <li>
+            {{i.category_name}}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+<p>
+        <a href="{% url 'main' %}">Cofnij</a>
+</p>
+
+{% endblock %}
